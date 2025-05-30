@@ -1,53 +1,70 @@
-# Tic Tac Toe - Java Console Game
+🎮 Tic Tac Toe - Java Console Game
+A simple command-line Tic Tac Toe game written in Java that supports:
 
-A simple command-line **Tic Tac Toe** game written in Java. It allows:
-- **2-player mode**
-- **Player vs Computer mode** (with random computer moves)
+🧑‍🤝‍🧑 2-player mode
 
-This project demonstrates basic Java features such as:
-- Arrays
-- Conditionals and loops
-- Input validation
-- Random number generation
-- Modular code with multiple functions
+🧠 Player vs Computer (random AI)
 
-## 🕹️ How to Play
+It showcases:
+Java basics (arrays, conditionals, loops)
+Input validation and exception handling
+Modular functions and gameplay logic
+Turn-based console output
 
-1. Run the `Prac2.java` file.
-2. Choose game mode:
-   - Enter player names
-   - Start 2-player game
-   - Play against the computer
-3. Enter positions (1-9) as shown below to make your move:
-    1 | 2 | 3
-   ---+---+---
-    4 | 5 | 6
-   ---+---+---
-    7 | 8 | 9
-4. First to get 3 in a row wins!
-
-
-## 🧠 Features
-
-- Turn-based logic with input validation
-- Automatic win detection for rows, columns, and diagonals
-- Computer opponent picks random moves
-- Clear and colorful console output
-
-## 🚀 Getting Started
-
-To compile and run:
-
-```bash
+🕹️ How to Play
+Compile and Run:
 javac TicTacToe.java
 java TicTacToe
 
-## 🛠️ Future Improvements
+Menu Options:
+1. Player Name: Customize names for Player 1 and Player 2
+2. Start game (2 Players): Human vs Human
+3. Play vs Computer: Human vs Random AI
+4. Quit: Exit the game
 
-- Smarter AI using Minimax
-- GUI with Java Swing
-- Scoreboard tracking wins
+Gameplay Instructions:
 
-## 📄 License
+Use numbers 1 to 9 to place your move on the board.
+Position layout:
 
-This project is open-source and free to use.
+ 1 | 2 | 3
+---+---+---
+ 4 | 5 | 6
+---+---+---
+ 7 | 8 | 9
+
+First player uses 'X', second uses 'O'. The game detects wins (rows, columns, diagonals) and draws automatically.
+
+🧠 Features
+✅ Custom player names
+
+✅ Random AI opponent
+
+✅ Turn-based gameplay
+
+✅ Input validation with helpful prompts
+
+✅ Win/draw detection
+
+✅ Board reset after each game
+
+
+🛠️ Code Highlights
+print() – Renders the board with a clean format
+won() – Detects all possible win conditions
+notVacant() – Prevents overwriting moves
+getPlayerMove() – Handles and validates user input
+ticTacToe() – Main game loop for both modes
+main() – Menu-driven navigation
+
+🚀 Future Improvements
+🤖 Smarter AI using Minimax algorithm
+🖼️ GUI version using Java Swing or JavaFX
+🏆 Scoreboard to track multiple rounds
+
+📁 File Structure
+TicTacToe.java      // Main game source file
+README.md           // Project info and instructions
+
+📄 License
+This project is open-source and free to use, learn from, or modify for your own educational projects.

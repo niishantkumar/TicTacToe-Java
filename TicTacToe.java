@@ -3,7 +3,7 @@ import java.util.*;
 class TicTacToe {
 
 	// func to check winning condition
-	public static boolean won(char arr[][], int turns, char currChar, int row, int col) {
+	public static boolean won(char arr[][], int turns, char currChar) {
 		if (turns < 5) {
 			return false;
 		}
@@ -69,7 +69,7 @@ class TicTacToe {
 		}
 	}
 
-	// new method to get validated user move
+	// func to get validated user move
 	public static int getPlayerMove(Scanner sc, char[][] arr) {
 		int pos;
 		while (true) {
@@ -92,7 +92,7 @@ class TicTacToe {
 		return pos;
 	}
 
-	// updated method to support computer play
+	// func for actual game
 	public static void ticTacToe(String p1, String p2, char arr[][], boolean vsComputer) {
 		Scanner sc = new Scanner(System.in);
 		Random rand = new Random();
@@ -141,11 +141,11 @@ class TicTacToe {
 
 			print(arr);
 
-			if (won(arr, turns, currChar, row, col)) {
+			if (won(arr, turns, currChar)) {
 				if (currChar == 'X') {
-					System.out.println("Congrats " + p1 + ", you won!!!");
+					System.out.println("Congratulations " + p1 + ", you won!!!");
 				} else {
-					System.out.println("Congrats " + p2 + ", you won!!!");
+					System.out.println("Congratulations " + p2 + ", you won!!!");
 				}
 
 				emptyBoard(arr);
@@ -159,6 +159,7 @@ class TicTacToe {
 		emptyBoard(arr);
 	}
 
+	// main func
 	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
 
@@ -166,13 +167,9 @@ class TicTacToe {
 		System.out.println();
 		System.out.println("Below are the boxes with their position number.\nRemember the positions!\n");
 
-		System.out.println(" 1 | 2 | 3 ");
-		System.out.println("---+---+---");
-		System.out.println(" 4 | 5 | 6 ");
-		System.out.println("---+---+---");
-		System.out.println(" 7 | 8 | 9 ");
-
-		char arr[][] = { { '-', '-', '-' }, { '-', '-', '-' }, { '-', '-', '-' } };
+		char arr[][] = { { '1', '2', '3' }, { '4', '5', '6' }, { '7', '8', '9' } };
+		print(arr);
+		emptyBoard(arr);
 
 		String p1 = "Player1";
 		String p2 = "Player2";
